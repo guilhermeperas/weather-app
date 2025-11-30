@@ -1,5 +1,5 @@
 const form = document.getElementById('weather-form');
-
-form.addEventListener('submit', (e) => {
+const cityInput = document.getElementById('city');
+form.addEventListener('submit', async (e) => {
     e.preventDefault();
 });

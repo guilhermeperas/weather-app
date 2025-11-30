@@ -9,7 +9,6 @@
 <body>
     <div class="container">
         <h1>🌤️ Weather App</h1>
-        <p class="subtitle">Check the weather in any city</p>
         
         <form action="/weather" method="GET" class="weather-form">
             <div class="input-group">
@@ -23,7 +22,42 @@
                 <button type="submit">Search</button>
             </div>
         </form>
+
+        {% if weather %}
+        <div class="weather-card">
+            <div class="weather-header">
+                <div>
+                    <h2>{{ weather.name }}, {{ weather.sys.country }}</h2>
+                    <span class="description">{{ weather.weather[0].description | capitalize }}</span>
+                </div>
+                <img src="https://openweathermap.org/img/wn/{{ weather.weather[0].icon }}@2x.png" alt="Weather icon" class="weather-icon">
+            </div>
+            
+            <div class="weather-main">
+                <span class="temperature">{{ weather.main.temp | round(1) }}°C</span>
+                <span class="feels-like">Feels like {{ weather.main.feels_like | round(1) }}°C</span>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail">
+                    <span class="detail-icon">💧</span>
+                    <span class="detail-value">{{ weather.main.humidity }}%</span>
+                </div>
+                <div class="detail">
+                    <span class="detail-icon">💨</span>
+                    <span class="detail-value">{{ weather.wind.speed }} m/s</span>
+                </div>
+                <div class="detail">
+                    <span class="detail-icon">👁️</span>
+                    <span class="detail-value">{{ (weather.visibility / 1000) | round(1) }} km</span>
+                </div>
+                <div class="detail">
+                    <span class="detail-icon">🌡️</span>
+                    <span class="detail-value">{{ weather.main.pressure }} hPa</span>
+                </div>
+            </div>
+        </div>
+        {% endif %}
     </div>
 </body>
-<script src="{{ url_for('static', filename='index.js') }}"></script>
 </html>

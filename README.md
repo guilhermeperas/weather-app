@@ -4,7 +4,7 @@ A simple API project that fetches weather data using the Weather API.
 
 ## Description
 
-This project demonstrates how to make API requests to a weather service and display the results using Flask.
+This project is to learn how to make API calls using Flask and Requests
 
 ## How to Run
 
@@ -20,8 +20,7 @@ This project demonstrates how to make API requests to a weather service and disp
 
 3. Open your browser and navigate to `http://127.0.0.1:5000`
 
-## Technologies
+## Improve
 
-- Python
-- Flask
-- Weather API
+- Instead of a input text, use the World Map and make it pressable
+- History

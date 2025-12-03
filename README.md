@@ -4,7 +4,8 @@ A simple API project that fetches weather data using the Weather API.
 
 ## Description
 
-This project is to learn how to make API calls using Flask and Requests
+This project is to learn how to make API calls using Flask and Requests.
+The App was deployed using Railway.
 
 ## How to Run
 

@@ -24,4 +24,4 @@ The App was deployed using Railway.
 ## Improve
 
 - Instead of a input text, use the World Map and make it pressable
-- History
+- Cache last searches.
